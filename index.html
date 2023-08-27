@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Phone API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <header>
+        <h2 class="text-5xl font-bold text-amber-600 text-center my-8" style="font-family: cursive;">Hunting Phone</h2>
+    </header>
+    
+    <main class="w-[70%] mx-auto">
+
+        <section class="flex items-center gap-2">
+            <input id="search-field" type="text" placeholder="search..." class="input input-bordered w-full max-w-xs" />
+            <button class="btn btn-accent" onclick="handleSearch()">Search</button>
+
+            <div class="hidden" id="spinner-div">
+                <span class="loading loading-spinner loading-lg text-lime-600"></span>
+            </div>
+        </section>
+
+        <!-- search result -->
+        <section class=" mt-7 mb-24">
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+
+            </div>
+            <!-- show all button -->
+            <div id="show-all-container" class="hidden text-center my-10">
+                <button class="btn btn-accent" onclick="handleShowAll()">Show All</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+<script src="phone.js"></script>
+</html>
